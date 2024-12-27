@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "6db5bcbc-99c4-4ac7-9f62-cb2fc41859ce",
+		"name": "Nestjs TypeORM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3752514"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/user",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/user/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"marinhakovk\",\n    \"email\":\"marinhakovk@gmail.com\",\n    \"password\":\"5555\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/author",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/author",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"author"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/author",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"danilo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/author",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"author"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/author/1/photo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"hoje 27\",\n  \"description\": \"atualizações do dia\",\n  \"filename\": \"quadro.jpg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/author/1/photo",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"author",
+						"1",
+						"photo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/author/1/photos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/author/1/photos",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"author",
+						"1",
+						"photos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
