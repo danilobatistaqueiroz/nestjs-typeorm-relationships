@@ -29,16 +29,16 @@ export class AuthorService {
     photo.title = title;
     photo.description = description;
     photo.filename = filename;
-    
+
+    //Salvar photos usando o author é necessário o relacionamento ter a opção de cascade:true
+    //Para o repositório author carregar as photos é necessário a opção eager:true
     const author = await this.authorRepository.findOneBy({ id: authorId });
-    //if(!author.photos){
-    //  author.photos = [];
-    //}
-    //author.photos.push(photo);
-    ///console.log(author.photos);
-    //await this.authorRepository.save(author,);
-    photo.author = author;
-    await this.photoRepository.save(photo);
+    author.photos.push(photo);
+    await this.authorRepository.save(author);
+
+    //É possivel salvar a coleção usando o repositório author mas também é possível usando o repositório photo
+    //photo.author = author;
+    //await this.photoRepository.save(photo);
     return photo;
   }
 

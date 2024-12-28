@@ -15,6 +15,6 @@ export class AuthorEntity {
   @Column()
   name: string;
 
-  @OneToMany(() => PhotoEntity, (photo) => photo.author, {eager: true}) // note: we will create author property in the Photo class below
+  @OneToMany(() => PhotoEntity, (photo) => photo.author, {eager: true, cascade: true}) // note: we will create author property in the Photo class below
   photos: PhotoEntity[];
 }
